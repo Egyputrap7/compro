@@ -16,3 +16,8 @@ const observer = new IntersectionObserver(
 sections.forEach(section => {
   observer.observe(section);
 });
+
+AOS.init({
+  duration: 1000,
+  once: true,
+});
