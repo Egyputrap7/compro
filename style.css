@@ -316,3 +316,22 @@ footer {
   font-weight: bold;
   color: #333;
 }
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.contact-item .label {
+  width: 80px; /* kamu bisa sesuaikan lebarnya */
+  font-weight: bold;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.contact-item .value {
+  flex: 1;
+  color: #fff;
+}
+
