@@ -28,20 +28,37 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Container sudah flex tapi kita pastikan layout branding dan nav sejajar */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* untuk responsif di layar kecil */
+  padding: 0 30px; /* Tambahan padding kiri-kanan */
+
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
+  color: white;
   letter-spacing: 1px;
+  margin-bottom: 5px;
 }
+
+.sLogo {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #dbeafe;
+  letter-spacing: 0.5px;
+}
+
 
 nav ul {
   list-style: none;
@@ -254,4 +271,48 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* Struktur Organisasi */
+.struktur-organisasi {
+  background-color: #f0f6ff; /* Biru terang lembut */
+  padding: 80px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.org-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.org-card {
+  background-color: #ffffff;
+  border-left: 6px solid #0b3d91;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 30px 20px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.org-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 61, 145, 0.2);
+}
+
+.org-card h3 {
+  font-size: 1.3rem;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.org-card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
 }
